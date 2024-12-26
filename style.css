@@ -1,0 +1,148 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.body {
+  background-color: #949aa0;
+}
+
+.navbar h1 {
+ font-size: 30px;
+ font-style: oblique;
+ color: #d6dbe0;
+}
+
+.main-content{
+  max-width: 90%;
+  margin: 0 auto;
+  padding: 0 16px;
+  background-color: #949aa0;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #949aa0;
+  padding: 5px;
+}
+.navbar .logo {
+  padding: 5px;
+  width: 400px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar .logo a {
+  font-size: x-large;
+  text-decoration: none;
+  color: #d6dbe0;
+}
+
+.navbar .logo img {
+  width: 25px;
+  height: 25px;
+}
+
+.gallery{
+  display: grid;
+  grid-template-areas:
+'img1 img1 img2'
+'img1 img1 img3'
+'img5 img4 img3'
+'img6 img7 img7'
+'img6 img7 img7'
+'img8 img8 img9'
+'img8 img8 img9';
+grid-gap: 20px;
+width: 100%;
+}
+
+.gambar img{
+
+  border-radius: 10px;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+#img1{
+  grid-area: img1;
+}
+#img2{
+  grid-area: img2;
+}
+#img3{
+  grid-area: img3;
+}
+#img4{
+  grid-area: img4;
+}
+#img5{
+  grid-area: img5;
+}
+#img6{
+  grid-area: img6;
+}
+#img7{
+  grid-area: img7;
+}
+#img8{
+  grid-area: img8;
+}
+#img9{
+  grid-area: img9;
+}
+
+@media only screen and (max-width: 1100px) {
+  .main-content {
+    max-width: 100%;
+    padding: 0;
+  }
+  .gallery {
+    max-width: 100%;
+    grid-template-areas:
+    'img1'
+    'img2 img5'
+    'img3 img4'
+    'img7 img7'
+    'img6 img8'
+    'img9 img9';
+  }
+}
+
+@media only screen and (max-width:600px) {
+  .gallery {
+    margin-top: 5px;
+  }
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+  }
+  .navbar .logo {
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .navbar .logo a {
+    font-size: smaller;
+    text-decoration: none;
+    color: #d6dbe0;
+  }
+  .navbar .logo img {
+    width: 20px;
+    height: 20px;
+  }
+  .gallery {
+    grid-template-areas:
+    'img1 img1'
+    'img2 img2'
+    'img3 img3'
+    'img4 img5'
+    'img7 img7'
+    'img6 img6'
+    'img8 img8'
+    'img9 img9';
+  }
+}
